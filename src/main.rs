@@ -17,7 +17,7 @@ fn main() {
 }
 
 fn bench_regex(runner: &Runner) {
-    println!("a bunch of regex");
+    println!("1,000,000 regex matches and mismatches");
     bench(&runner, |ref runner| {
         runner.regex.is_match("www.weedmaps.com");
         runner.regex.is_match("www.growone.com");
@@ -25,7 +25,7 @@ fn bench_regex(runner: &Runner) {
 }
 
 fn bench_glob(runner: &Runner) {
-    println!("a bunch of globs");
+    println!("1,000,000 glob matches and mismatches");
     bench(&runner, |ref runner| {
         runner.glob.matches("www.weedmaps.com");
         runner.glob.matches("www.growone.com");
